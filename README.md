@@ -35,7 +35,7 @@ Raymon Anthony Doane received 24'801 votes.
 Diana DeGette received 73.8% of total votes,
 Raymon Anthony Doane received 3.1% of total votes.
 8. Diana DeGette was the winning candidate, with 272'892 votes, 73.8% of the total votes.
-![Results by County & Candidate](Resources_Election_Analysis/Terminal Results for Candidate and County.png)
+![Results by County & Candidate](Resources_Election_Analysis/Terminal_Results_for_Candidate_and_County.png)
 
 ## Election-Audit Summary
 The script that I have written to get these elction results is robust and should be capable of re-use for other elections.  There may require slight modifications, if the future use case dataset is not in the same format.
