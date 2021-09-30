@@ -18,6 +18,6 @@ The PyPoll.py file was created as I progressed through Module 3.  In order to an
 	- Header,
 	- Total votes,
 	- Votes per candidate,
-	- Percentage votes per candidate,
+	- Percentage votes per candidate
 - Establish and declare a winner;
 - Create a summary of the winner & write that information to the file.
