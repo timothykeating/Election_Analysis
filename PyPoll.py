@@ -133,7 +133,7 @@ with open(elec_outcome,'w') as resfile:
         f'\n-------------------\n'
         f'Winner: {win_cand}\n'
         f'Winning Vote Count: {win_votes:,}\n'
-        f'Winning Percentage: {win_pct:.2f}%\n'
+        f'Winning Percentage: {win_pct:.1f}%\n'
         f'-------------------'
     )
     print(win_summary)
