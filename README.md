@@ -1,6 +1,12 @@
 # Election_Analysis
 Python Module 3
 
+#### Notes on Python Code...
+I did not use the same variable names throughout the code as were suggested by the Module work.  In most cases, my variable names are shorter, with abbreviations used.
+
+I used Python 3.7.6 version. 
+I used Visual Studio Code program to write my code.
+
 ## Overview of Election Audit 
 The purposes of this election audit analysis was to find:
 1. The total number of votes in the election.
@@ -29,5 +35,17 @@ Raymon Anthony Doane received 24'801 votes.
 Diana DeGette received 73.8% of total votes,
 Raymon Anthony Doane received 3.1% of total votes.
 8. Diana DeGette was the winning candidate, with 272'892 votes, 73.8% of the total votes.
+![Results by County & Candidate](Resources_Election_Analysis/Terminal Results for Candidate and County.png)
+
+## Election-Audit Summary
+The script that I have written to get these elction results is robust and should be capable of re-use for other elections.  There may require slight modifications, if the future use case dataset is not in the same format.
+1.  Given that a new dataset would come to us with a different filename than the filename of these data, line 8 of the code would have to be amended to show the name of the new file.
+2.  Future Users would need to ensure that the new dataset was in ".csv" (comma seperated values) format.
+3.  The future use case dataset would need to be inspected to ascertain the layout of the columns in the csv file.  If the same data came to our future User with the columns in a different order than our current dataset, we would need to modify code on lines: 49 and 68.
+NB: if the new dataset had the columns in the same order - Ballot_#, County, Candidate - then this modification (3) would not be necessary.  
+4.  Code on line 10 should be modified by any future Users, so that they can create a new text file for each subsequent usage.  If not, their future data would overwrite the data in the file election_outcomes.txt each time they used this script.
+
+
+
 
 
