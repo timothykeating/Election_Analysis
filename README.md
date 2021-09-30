@@ -3,6 +3,7 @@ Python Module 3
 
 #### Notes on Python Code...
 My code can be found in file: "PyPoll.py" in this repository.
+
 The results of the analysis were written to a text file; that file is named election_outcome.txt and can be found in this repository, in the folder: Resources_Election_Analysis.
 
 I did not use the same variable names throughout the code as were suggested by the Module work.  In most cases, my variable names are shorter, with abbreviations used.
