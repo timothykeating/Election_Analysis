@@ -59,37 +59,54 @@ with open(elec_data) as election_data:
 #5z. print the candidate vote dictionary to check
 # print(cand_votes)
 
-#6. determine percentage of total votes each candidate got
-# we're over here, flush with the left margin, because we're done with the for-loop
-# AND we're done reading the csv file, completely
-###
-# loop through the dictionary, and declare votes and vote_pct with formulae
-for cand_name in cand_votes:
-    votes=cand_votes[cand_name]
-    vote_pct=float(votes)/float(total_votes)*100
-    # 6z. print to check 
-    
-    print(f'{cand_name}: received {vote_pct:.2f}% of the vote.')
+#8.  write results to a .txt file, include a header "Election Results" and total vote count above the candidates info
+# we're jumping in @#8 out of order here, because of the way the Module was laid out - sorry bud!
+with open(elec_outcome,'w') as resfile:
+    election_results=(
+        f'\nElection Results\n'
+        f'-------------------\n'
+        f'Total Votes: {total_votes:,}\n'
+        f'-------------------\n'
+    )
+    print(election_results)
+    resfile.write(election_results)
+
+    #6. determine percentage of total votes each candidate got
+    # we're over here, flush with the left margin, because we're done with the for-loop
+    # AND we're done reading the csv file, completely
     ###
-    #6a. still in the for-loop, check each variable votes vs the winning vote count variable
-    # & replace/update all the winning variables if the amount is greater than
-    if votes>win_votes:
-        win_cand=cand_name
-        win_votes=votes
-        win_pct=vote_pct
-#7z.  print check
-# print(win_cand)
-# print(win_votes)
-# print(f'{win_pct:.2f}%')
-#7.  print winning candidate with f string & all winning variables
-win_summary=(
-    f'-------------------\n'
-    f'Winner: {win_cand}\n'
-    f'Winning Vote Count: {win_votes:,}\n'
-    f'Winning Percentage: {win_pct:.2f}%\n'
-    f'-------------------'
-)
-print(win_summary)
+    # loop through the dictionary, and declare votes and vote_pct with formulae
+    for cand_name in cand_votes:
+        votes=cand_votes[cand_name]
+        vote_pct=float(votes)/float(total_votes)*100
+        # 6aa. store a line of text for each candidate as each_cand, print & write to the txt file
+        each_cand=(f'{cand_name}: received {vote_pct:.2f}% of the vote.\n')
+        print(each_cand)
+        resfile.write(each_cand)
+        ###
+        #6a. still in the for-loop, check each variable votes vs the winning vote count variable
+        # & replace/update all the winning variables if the amount is greater than
+        if votes>win_votes:
+            win_cand=cand_name
+            win_votes=votes
+            win_pct=vote_pct
+    #7z.  print check
+    # print(win_cand)
+    # print(win_votes)
+    # print(f'{win_pct:.2f}%')
+    #7.  print winning candidate with f string & all winning variables & write to txt file
+    win_summary=(
+        f'-------------------\n'
+        f'Winner: {win_cand}\n'
+        f'Winning Vote Count: {win_votes:,}\n'
+        f'Winning Percentage: {win_pct:.2f}%\n'
+        f'-------------------'
+    )
+    print(win_summary)
+    resfile.write(win_summary)
+
+
+
 
 
 
